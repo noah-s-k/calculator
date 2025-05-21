@@ -1,38 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Calculator';
+  src: local('Calculator'), url(./fonts/Calculator.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .App {
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: 'Calculator', serif;
+  font-size: 30px;
+  background-color: lightblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calculator {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 350px;
+  height: 465px;
+  background-color: black;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#display-container {
+  background-color: #323232;
+  height: 65px;
+  width: 100%;
+  grid-area: display;
+  margin-bottom: 5px;
+  padding-right:10px;
+  text-align:right;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#calculation {
+  padding-right: 2px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 22px;
+  color: yellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#display {
+  height: 40px;
+  line-height: 35px;
+  font-size: 40px;
+}
+
+.calcButton {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  min-height: 70px;
+  background-color: gray;
+  line-height: 70px;
+  color: white;
+  opacity: 0.7;
+}
+
+.calcButton:hover {
+  opacity: 1;
+}
+
+#clear {
+  grid-area: ac;
+  background-color: darkred;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#multiply {
+  grid-area: mult;
+}
+
+#subtract {
+  grid-area: subs;
+}
+
+#add {
+  grid-area: addd;
+}
+
+#equals {
+  grid-area: equals;
+  line-height: 140px;
+  background-color: darkblue;
+}
+
+#decimal {
+  grid-area: point;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#six {
+  grid-area: six;
+}
+
+#five {
+  grid-area: five;
+}
+
+#four {
+  grid-area: four;
+}
+
+#three {
+  grid-area: three;
+}
+
+#two {
+  grid-area: two;
+}
+
+#one {
+  grid-area: one;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#grid-box {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-items: stretch;
+  gap: 5px;
+  grid:
+          'display display display display'
+          'ac ac divide mult'
+          'seven eight nine subs'
+          'four five six addd'
+          'one two three equals'
+          'zero zero point equals';
+}
+
+#credits {
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+  text-align: center;
+  font-size: 14px;
+  font-family: arial, serif;
+}
+
+
+#credits a {
+  text-decoration: none;
+  color: black;
+}
+
+#credits a:hover {
+  text-decoration: underline;
 }
