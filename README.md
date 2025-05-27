@@ -1,6 +1,6 @@
 ![FreeCodeCamp Logo](https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png)
 
-# A Drum Machine
+# A simple Calculator
 
 This project is part of the [FreeCodeCamp](https://www.freecodecamp.org/learn) curriculum for [Front End Development Libraries](https://www.freecodecamp.org/learn/front-end-development-libraries).
 
